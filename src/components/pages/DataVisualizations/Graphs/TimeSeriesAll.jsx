@@ -14,7 +14,6 @@ const mapStateToProps = state => {
 
 function TimeSeriesAll(props) {
   const { timeSeriesAllData } = props;
-  const currentYear = new Date().getFullYear();
   const [rowsForAllDisplay, setRowsForAllDisplay] = useState([]);
   const columnsForAllDisplay = [
     'Fiscal Year',
@@ -66,7 +65,7 @@ function TimeSeriesAll(props) {
           xaxis: {
             range: [
               timeSeriesAllData[0] || 2015,
-              timeSeriesAllData[timeSeriesAllData.length - 1] || currentYear,
+              timeSeriesAllData[timeSeriesAllData.length - 1] || 2022,
             ],
             title: 'Fiscal Year',
           },

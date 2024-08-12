@@ -19,7 +19,7 @@ import {
         That way if, say, a researcher wants to see all
         the data by office just from 2017, and then they
         tab over to view all the data as a time series from
-        2015-currentYear, and then they go back to the Office tab,
+        2015-2022, and then they go back to the Office tab,
         their previous query won't be overwritten by the
         one they made in the different tab, and they'll
         be able to seamlessly resume.
@@ -28,74 +28,73 @@ import {
 
       ------------------------------------------------------
 */
-const currentYear = new Date().getFullYear();
 export const initialState = {
   timeSeriesAllData: {},
-  timeSeriesAllYears: [2015, currentYear],
+  timeSeriesAllYears: [2015, 2022],
   officeHeatMapData: {},
-  officeHeatMapYears: [2015, currentYear],
+  officeHeatMapYears: [2015, 2022],
   citizenshipMapAllData: {},
-  citizenshipMapAllYears: [2015, currentYear],
+  citizenshipMapAllYears: [2015, 2022],
   offices: {
     'Los Angeles, CA': {
       timeSeriesData: {},
-      timeSeriesYears: [2015, currentYear],
+      timeSeriesYears: [2015, 2022],
       citizenshipMapData: {},
-      citizenshipMapYears: [2015, currentYear],
+      citizenshipMapYears: [2015, 2022],
     },
     'San Francisco, CA': {
       timeSeriesData: {},
-      timeSeriesYears: [2015, currentYear],
+      timeSeriesYears: [2015, 2022],
       citizenshipMapData: {},
-      citizenshipMapYears: [2015, currentYear],
+      citizenshipMapYears: [2015, 2022],
     },
     'New York, NY': {
       timeSeriesData: {},
-      timeSeriesYears: [2015, currentYear],
+      timeSeriesYears: [2015, 2022],
       citizenshipMapData: {},
-      citizenshipMapYears: [2015, currentYear],
+      citizenshipMapYears: [2015, 2022],
     },
     'Houston, TX': {
       timeSeriesData: {},
-      timeSeriesYears: [2015, currentYear],
+      timeSeriesYears: [2015, 2022],
       citizenshipMapData: {},
-      citizenshipMapYears: [2015, currentYear],
+      citizenshipMapYears: [2015, 2022],
     },
     'Chicago, IL': {
       timeSeriesData: {},
-      timeSeriesYears: [2015, currentYear],
+      timeSeriesYears: [2015, 2022],
       citizenshipMapData: {},
-      citizenshipMapYears: [2015, currentYear],
+      citizenshipMapYears: [2015, 2022],
     },
     'Newark, NJ': {
       timeSeriesData: {},
-      timeSeriesYears: [2015, currentYear],
+      timeSeriesYears: [2015, 2022],
       citizenshipMapData: {},
-      citizenshipMapYears: [2015, currentYear],
+      citizenshipMapYears: [2015, 2022],
     },
     'Arlington, VA': {
       timeSeriesData: {},
-      timeSeriesYears: [2015, currentYear],
+      timeSeriesYears: [2015, 2022],
       citizenshipMapData: {},
-      citizenshipMapYears: [2015, currentYear],
+      citizenshipMapYears: [2015, 2022],
     },
     'Boston, MA': {
       timeSeriesData: {},
-      timeSeriesYears: [2015, currentYear],
+      timeSeriesYears: [2015, 2022],
       citizenshipMapData: {},
-      citizenshipMapYears: [2015, currentYear],
+      citizenshipMapYears: [2015, 2022],
     },
     'Miami, FL': {
       timeSeriesData: {},
-      timeSeriesYears: [2015, currentYear],
+      timeSeriesYears: [2015, 2022],
       citizenshipMapData: {},
-      citizenshipMapYears: [2015, currentYear],
+      citizenshipMapYears: [2015, 2022],
     },
     'New Orleans, LA': {
       timeSeriesData: {},
-      timeSeriesYears: [2015, currentYear],
+      timeSeriesYears: [2015, 2022],
       citizenshipMapData: {},
-      citizenshipMapYears: [2015, currentYear],
+      citizenshipMapYears: [2015, 2022],
     },
   },
 };
@@ -110,19 +109,19 @@ const vizReducer = (state = initialState, action) => {
             return {
               ...state,
               timeSeriesAllData: {},
-              timeSeriesAllYears: [2015, currentYear],
+              timeSeriesAllYears: [2015, 2022],
             };
           case 'office-heat-map':
             return {
               ...state,
               officeHeatMapData: {},
-              officeHeatMapYears: [2015, currentYear],
+              officeHeatMapYears: [2015, 2022],
             };
           case 'citizenship':
             return {
               ...state,
               citizenshipMapAllData: {},
-              citizenshipMapAllYears: [2015, currentYear],
+              citizenshipMapAllYears: [2015, 2022],
             };
           default:
             return state;
@@ -137,7 +136,7 @@ const vizReducer = (state = initialState, action) => {
                 [action.payload.office]: {
                   ...state.offices[action.payload.office],
                   timeSeriesData: {},
-                  timeSeriesYears: [2015, currentYear],
+                  timeSeriesYears: [2015, 2022],
                 },
               },
             };
@@ -149,7 +148,7 @@ const vizReducer = (state = initialState, action) => {
                 [action.payload.office]: {
                   ...state.offices[action.payload.office],
                   citizenshipMapData: {},
-                  citizenshipMapYears: [2015, currentYear],
+                  citizenshipMapYears: [2015, 2022],
                 },
               },
             };

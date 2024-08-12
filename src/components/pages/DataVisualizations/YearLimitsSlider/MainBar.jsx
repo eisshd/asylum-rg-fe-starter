@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Tick from './Tick';
 import Thumb from './Thumb';
 import { useInterval } from '../../../../utils';
-import { setHeatMapYears } from '../../../../state/actionCreators';
+import { setHeatMapYears } from '../../../../state/actionCreators/vizActionCreator';
 import { colors } from '../../../../styles/data_vis_colors';
 
 const { primary_accent_color } = colors;

@@ -5,8 +5,8 @@ Each synchronous function should return an action object with a type and a paylo
 Each asynchronous function should dispatch its action object (type/payload) to the reducer.
 */
 import {
-  SET_VISUALIZATION_DATA,
   RESET_VISUALIZATION_QUERY,
+  SET_VISUALIZATION_DATA,
   SET_HEAT_MAP_YEARS,
 } from '../actionTypes';
 

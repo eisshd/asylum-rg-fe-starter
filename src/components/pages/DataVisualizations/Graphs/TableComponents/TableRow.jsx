@@ -17,8 +17,7 @@ function TableRow(props) {
       }}
     >
       {columns.map((property, idx) => {
-        if (row) {
-          if (typeof row[property] === 'object') {
+        if (typeof row[property] === 'object') {
             return (
               <SubTable
                 dataObject={row[property]}
@@ -37,7 +36,7 @@ function TableRow(props) {
             );
           }
         }
-      })}
+      )}
     </div>
   );
 }

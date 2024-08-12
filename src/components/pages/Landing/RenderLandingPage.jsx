@@ -39,12 +39,12 @@ function RenderLandingPage(props) {
         </div>
 
         <div>
-          <img src={GrantRatesByNationalityImg} alt='bar-graph' className='bar-graph'/>
+          <img src={GrantRatesByNationalityImg} alt='pie-graph' className='pie-graph'/>
           <p>Search Grants By Nationality</p>
         </div>
 
         <div>
-          <img src={GrantRatesOverTimeImg} alt='bar-graph' className='bar-graph'/>
+          <img src={GrantRatesOverTimeImg} alt='line-graph' className='line-graph'/>
           <p>Search Grant Rates Over Time</p>
         </div>
       </div>
