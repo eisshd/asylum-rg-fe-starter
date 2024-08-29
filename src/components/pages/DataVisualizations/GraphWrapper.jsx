@@ -99,6 +99,7 @@ function GraphWrapper(props) {
           let obj = {};
           let obj2 = Object.assign(obj, fiscalData, {citizenshipResults: citizenshipData});
           data.push(obj2);
+          console.log(data);
           stateSettingCallback(view, office, data);
         });
         })

@@ -1,14 +1,10 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import React from "react";
+import loading from "../../styles/Images/loading.svg";
 
-function LoadingComponent(props) {
-  const { message } = props;
+const Loading = () => (
+  <div className="spinner">
+    <img src={loading} alt="Loading" />
+  </div>
+);
 
-  return <div>{message}</div>;
-}
-
-export default LoadingComponent;
-
-LoadingComponent.propTypes = {
-  message: PropTypes.string.isRequired,
-};
+export default Loading;
